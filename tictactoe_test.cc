@@ -26,6 +26,8 @@ bool tttb_winner_vertical_test() {
 }
 
 
+// Runs tests above, and prints a message if they all pass.
+// If any fail, they print their own failure messages.
 int main() {
     bool result = true;
     result &= tttb_winner_vertical_test();
