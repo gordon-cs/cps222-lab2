@@ -9,6 +9,7 @@ using std::endl;
 
 #include "tictactoe.h"
 
+
 bool tttb_winner_vertical_test() {
     TictactoeBoard b;
     b.set(0, 0, TictactoeXO::X);
