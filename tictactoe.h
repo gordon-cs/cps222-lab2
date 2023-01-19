@@ -35,46 +35,4 @@ private:
 
 };
 
-// Encapsulates one move in Tic-tac-toe.
-class TictactoeMove {
-public:
-    // Constructor.  player indicates whether to place an X or O (circle).
-    // (row, col) identifies place on board; (0,0) is bottom left.
-    TictactoeMove(TictactoeXO player, unsigned row, unsigned col);
-
-    // Constructor reads coordinates from input stream in format
-    //   row col
-    // example input for center square:
-    //   1 1
-    TictactoeMove(TictactoeXO player, istream input);
-
-    // getters
-    TictactoeXO player();
-    unsigned row();
-    unsigned col();
-
-private:
-    TictactoeXO player_;
-
-    // location on board: (0,0) is bottom left
-    unsigned row_;
-    unsigned col_;
-};
-
-// Stores and manages a Tic-tac-toe game.
-class TictactoeGame {
-public:
-
-private:
-    TictactoeBoard board_;
-    // Instructor's note:
-    // http://en.cppreference.com/w/cpp/language/nullptr explains nullptr and
-    // http://www.stroustrup.com/bs_faq2.html#null explains why to use it.
-    TictactoeMove* moves_[9] = {
-        nullptr, nullptr, nullptr,
-        nullptr, nullptr, nullptr,
-        nullptr, nullptr, nullptr
-    };
-};
-
 #endif // TICTACTOE_H_

@@ -4,16 +4,9 @@
 # Authors (everything else):
 
 # Tictactoe uses C++ 2011.  Compile for debugging (-g) with warnings.
-# Google Test needs -pthread.
-CXXFLAGS=-std=c++11 -g -Wall -Wextra -pthread
+CXXFLAGS=-std=c++11 -g -Wall -Wextra
 
 # Instructor's note: First target is the default; use it to build everything.
-all:		tictactoe \
-		tictactoe_test
-
-# Main program for users to use.
-tictactoe :		tictactoe_main.o tictactoe.o
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $^
 
 # Program to run tests and report results.
 tictactoe_test:		tictactoe_test.o tictactoe.o
@@ -21,7 +14,6 @@ tictactoe_test:		tictactoe_test.o tictactoe.o
 
 # Dependencies on .h files
 tictactoe.o:	tictactoe.h
-tictactoe_main.o:	tictactoe.h
 tictactoe_test.o:	tictactoe.h
 
 # Instructor's note: For now, we'll write and run tests with simple C++ code.
