@@ -19,6 +19,11 @@ tictactoe :		tictactoe_main.o tictactoe.o
 tictactoe_test:		tictactoe_test.o tictactoe.o
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $^
 
+# Dependencies on .h files
+tictactoe.o:	tictactoe.h
+tictactoe_main.o:	tictactoe.h
+tictactoe_test.o:	tictactoe.h
+
 # Instructor's note: For now, we'll write and run tests with simple C++ code.
 # Later, we'll learn to use a unit test framework.  It will ease writing
 # tests and improve their output.

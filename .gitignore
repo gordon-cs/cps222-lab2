@@ -1,4 +1,6 @@
 # Compiled Object files
+tictactoe
+tictactoe_test
 *.slo
 *.lo
 *.o
@@ -26,3 +28,6 @@
 
 # Emacs temp files
 *~
+
+# Mac files (normally invisible)
+.DS_Store
